@@ -10,7 +10,7 @@ let output =''
 |--------------|------------------------------|--------------|----------------------------------------|------------------------------|
 | userName     | falsy                        | falsy        | truthy                                 | truthy                       |
 | userQuestion | falsy                        | truthy       | falsy                                  | truthy                       |
-| output       | What would you like to know? | userQuestion | userName, what would you like to know? | userName asks, "userQestion" |
+| output       | What would you like to know? | userQuestion | userName, what would you like to know? | userName asks, "userQuestion" |
 
 The most intuitive and simple-to-read implementation is via an if else operator.
 */
@@ -30,7 +30,7 @@ const randomNumber = Math.floor(Math.random()*8);
 let eightBall = '';
 
 /*The switch case is the most readable way to implement this many options.
-If the user didn't ask a question, the eightBall with still log a reply to the console, which is not a desired behaviour.
+If the user didn't ask a question, the eightBall will still log a reply to the console, which is not a desired behaviour.
 So we wrap the switch case that produced output into an if statement that checks if userQuestion is truthy (or !=== '').
 */
 if(userQuestion){
