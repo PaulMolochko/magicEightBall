@@ -1,0 +1,54 @@
+const userName = 'Paul';
+userName ? console.log(`Hello, ${userName}!`) : console.log (`Hello!`)
+
+const userQuestion = 'Will I become a developer?';
+//userQuestion ? console.log(userQuestion) : console.log (`What do you want to know?`)
+let output =''
+
+if(userName && userQuestion){
+  output = `${userName} asks "${userQuestion}"`;
+} else if (!userName && userQuestion) {
+  output = userQuestion;
+} else if (userName && !userQuestion){
+  output = `${userName}, what would you like to know?`
+} else {
+  output = 'What would you like to know?'
+}
+
+console.log(output);
+
+const randomNumber = Math.floor(Math.random()*8);
+let eightBall = '';
+
+if(userQuestion){
+switch (randomNumber) {
+    case 0:
+    eightBall = 'It is certain';
+    break;
+    case 1:
+    eightBall = 'It is decidedly so';
+    break;
+  case 2:
+   eightBall = 'Reply hazy try again';
+    break;
+ case 3:
+    eightBall = 'Cannot predict now';
+    break;
+ case 4:
+   eightBall = 'Do not count on it';
+    break;
+ case 5:
+    eightBall = 'My sources say no';
+    break;
+ case 6:
+    eightBall = 'Outlook not so good';
+    break;
+ case 7:
+    eightball = 'Signs point to yes';
+    break;
+  default:
+    eightBall = 'Error';
+    break;
+}}
+
+console.log(eightBall)
