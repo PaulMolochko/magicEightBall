@@ -1,7 +1,16 @@
-const userName = 'Paul';
+// Get DOM Elements
+const userNameForm = document.querySelector('userName');
+const userNameInput = document.querySelector("[name = 'userName]");
+const userName = document.getElementById('userName');
+
+const userQuestionForm = document.querySelector('userQuestion');
+const userQuestionInput = document.querySelector("[name = 'userQuestion]");
+const userQuestion = document.getElementById('userQuestion'); 
+
+//const userName = 'Paul';
 userName ? console.log(`Hello, ${userName}!`) : console.log (`Hello!`)
 
-const userQuestion = 'Will I become a developer?';
+//const userQuestion = 'Will I become a developer?';
 let output =''
 
 /* Considering the variables that we have, we have 4 cases.
@@ -14,6 +23,7 @@ let output =''
 
 The most intuitive and simple-to-read implementation is via an if else operator.
 */
+
 if(userName && userQuestion){
   output = `${userName} asks "${userQuestion}"`;
 } else if (!userName && userQuestion) {
@@ -57,7 +67,7 @@ if(userQuestion){
       eightBall = 'Outlook not so good';
       break;
     case 7:
-      eightball = 'Signs point to yes';
+      eightBall = 'Signs point to yes';
       break;
     default:
       eightBall = 'Error';
