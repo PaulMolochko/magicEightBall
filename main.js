@@ -1,6 +1,6 @@
 // Get DOM Elements
 const userNameForm = document.querySelector('userName');
-const userNameInput = document.querySelector("[name = 'userName]");
+const userNameInput = document.querySelector("[name = 'userName']");
 const userName = document.getElementById('userName');
 
 const userQuestionForm = document.querySelector('userQuestion');
@@ -8,17 +8,17 @@ const userQuestionInput = document.querySelector("[name = 'userQuestion]");
 const userQuestion = document.getElementById('userQuestion'); 
 
 //const userName = 'Paul';
-userName ? console.log(`Hello, ${userName}!`) : console.log (`Hello!`)
+userName ?? console.log(`Hello, ${userName}!`) : console.log (`Hello!`)
 
 //const userQuestion = 'Will I become a developer?';
 let output =''
 
 /* Considering the variables that we have, we have 4 cases.
  
-|   variable   |            Case 1            |    Case 2    |                 Case 3                 |            Case 4            |
-|--------------|------------------------------|--------------|----------------------------------------|------------------------------|
-| userName     | falsy                        | falsy        | truthy                                 | truthy                       |
-| userQuestion | falsy                        | truthy       | falsy                                  | truthy                       |
+|   variable   |            Case 1            |    Case 2    |                 Case 3                 |            Case 4             |
+|--------------|------------------------------|--------------|----------------------------------------|-------------------------------|
+| userName     | falsy                        | falsy        | truthy                                 | truthy                        |
+| userQuestion | falsy                        | truthy       | falsy                                  | truthy                        |
 | output       | What would you like to know? | userQuestion | userName, what would you like to know? | userName asks, "userQuestion" |
 
 The most intuitive and simple-to-read implementation is via an if else operator.
