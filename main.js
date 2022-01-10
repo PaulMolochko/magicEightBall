@@ -8,7 +8,7 @@ const userQuestionInput = document.querySelector("[name = 'userQuestion]");
 const userQuestion = document.getElementById('userQuestion'); 
 
 //const userName = 'Paul';
-userName ?? console.log(`Hello, ${userName}!`) : console.log (`Hello!`)
+userName ? console.log(`Hello, ${userName}!`) : console.log (`Hello!`);
 
 //const userQuestion = 'Will I become a developer?';
 let output =''
